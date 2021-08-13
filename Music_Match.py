@@ -1,4 +1,3 @@
-# import json
 import os
 from dejavu import Dejavu
 from dejavu.logic.recognizer.file_recognizer import FileRecognizer
@@ -23,7 +22,7 @@ class Music_Match:
         finDir = input("Input the directory that stores all the songs to be fingerprinted: \n")
         fintype = input("Input '.mp3' or '.wav', which is the file type of all the songs to be fingerprinted: \n")
         if os.path.isdir(finDir) and (fintype==".mp3" or fintype==".wav"):
-            # Fingerprint all the mp3's in the directory we give it
+            # Fingerprint all the songs in the directory we give it
             self.djv.fingerprint_directory(finDir, [fintype])
         else:
             print("Input error. Please try again")
@@ -49,7 +48,7 @@ class Music_Match:
         # transform to sorted tuples
         d = sorted(d.items(), key=lambda x: x[1], reverse=True)
 
-        print("Song Name", "Match Percentage")
+        print("{0:25s} {1:20s}".format("Song Name", "Match Percentage"))
         for i in range(len(d)):
             print("{0:25s} {1:8.2f}".format(d[i][0], d[i][1]))
     
