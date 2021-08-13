@@ -29,7 +29,7 @@ class Music_Match:
 
     def recognize(self):
         # Recognize audio from a file
-        recogDir = input("Input the directory that stores the song you want to recongnize: \n")
+        recogDir = input("Input the directory that stores the song you want to recognize: \n")
         try:
             results = self.djv.recognize(FileRecognizer, recogDir)
         except FileNotFoundError:
