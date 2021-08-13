@@ -66,5 +66,5 @@ Song Name                 Match Percentage
 06 Mine [US Version]          0.08
 09 Love Story                 0.08
 ```
-Looks like dejavu is better at comparing songs that are identical, rather than covers or alternate versions. 
+Looks like dejavu is better at comparing songs that are identical, rather than covers or alternate versions. <br />
 Note: The origninal settings will only compare with two songs. To compare with more songs (like the three songs above), go to config/settings.py in dejavu and  change "TOPN" to the amount of songs that you want to compare. 
